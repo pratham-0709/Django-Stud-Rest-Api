@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RESTAPP</title>
+</head>
+<body>
+    <h2>Add Student details</h2>
+    <form method="POST">{% csrf_token %}
+	    <input type="text" name="name" placeholder="name"> <br /><br />
+	    <input type="text" name="mark1" placeholder="mark1"><br /><br />
+	    <input type="text" name="mark2" placeholder="mark2"><br /><br />
+	    <input type="text" name="mark3" placeholder="mark3"><br /><br />
+	    <input type="text" name="total" placeholder="total"><br /><br />
+        <input type="submit" value="save">
+    </form>
+</body>
+</html>
