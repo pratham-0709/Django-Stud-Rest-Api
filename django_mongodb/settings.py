@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+SECURE_SSL_REDIRECT=False
+SESSION_COOKIE_SECURE=False
+CSRF_COOKIE_SECURE=False
 
 # Application definition
 
@@ -72,7 +75,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_mongodb.wsgi.application'
-
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8081',
+)
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
